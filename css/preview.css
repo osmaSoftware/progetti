@@ -29,10 +29,12 @@ html {
   background-position: 0 0;
   width: 75px;
 }
+
 body {
   color: black;
-  background: #ffffff url("../images/wood.jpg");
-  /*background: #ffffff url("../images/rsz2_tavolo.jpg);*/
+  background: #ffffff url("../images/rsz2_tavolo.jpg);
+  /*background: #ffffff url("../images/wood.jpg");
+  background: #ffffff url("../images/rsz2_tavolo.jpg);*/
   background-position: 50% top;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
