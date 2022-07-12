@@ -31,7 +31,8 @@ html {
 }
 body {
   color: black;
-  background: #ffffff url("../images/wood.jpg");
+  /*background: #ffffff url("../images/wood.jpg");*/
+  background: #ffffff url("../images/Tavoloroccia.jpg);
   background-position: 50% top;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
