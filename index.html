@@ -1,176 +1,347 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-		<meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <title>Experimental Page Layout Inspired by Flipboard</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
-        <meta name="description" content="Experimental Page Layout Inspired by Flipboard" />
-        <meta name="keywords" content="flip, pages, flipboard, layout, responsive, web, web design, grid, ipad, jquery, css3, 3d, perspective, transitions, transform" />
-        <meta name="author" content="" />
-        <link rel="shortcut icon" href="../favicon.ico"> 
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-		<script type="text/javascript" src="js/modernizr.custom.08464.js"></script>
-		<script id="pageTmpl" type="text/x-jquery-tmpl">
-			<div class="${theClass}" style="${theStyle}">
-				<div class="front">
-					<div class="outer">
-						<div class="content" style="${theContentStyleFront}">
-							<div class="inner">{{html theContentFront}}</div>
-						</div>
-					</div>
-				</div>
-				<div class="back">
-					<div class="outer">
-						<div class="content" style="${theContentStyleBack}">
-							<div class="inner">{{html theContentBack}}</div>
-						</div>
-					</div>
-				</div>
-			</div>			
-		</script>
-    </head>
-    <body>
-		
-		<header class="main-title">
-			<h1>Experimental Page Layout <strong>Inspired by Flipboard</strong></h1>
-			<p>Swipe or drag to flip the pages, click to open items </p>
-			<p><strong>Best viewed in a Webkit browser (Safari, Chrome)</strong></p>
-		</header>
-		
-		<div id="flip" class="container">
-		
-			<div class="f-page f-cover">
-				<div class="cover-elements">
-					<div class="logo">
-						Pageflip
-						<a class="f-ref" href="#">Images by NASA HQ Photo</a>
-					</div>
-					<h1>Spacy Flipping Pages with CSS3 &amp; jQuery <span>Inspired by <a href="http://flipboard.com/">Flipboard</a></span></h1>
-					<div class="f-cover-story"><span>Cover Story</span>Shuttle Enterprise Flight to New York</div>
-				</div>
-				<div class="f-cover-flip">&lt; Flip</div>
-			</div>
-			
-			<div class="f-page">
-				<div class="f-title">
-					<a href="#">Previous Demo</a>
-					<h2>Incredible Spacenews</h2>
-					<a href="#">Back to the Codrops Article</a>
-				</div>
-				<div class="box w-25 h-70">
-					<div class="img-cont img-1"></div>
-					<h3>Japanese Prime Minister Noda with NASA Administrator Bolden <span>Published May 3, 2012</span></h3>
-					<p>Thundercats adipisicing marfa wes anderson farm-to-table, +1 vero yr ennui messenger bag occaecat williamsburg cosby sweater anim tattooed. Farm-to-table umami direct trade viral cosby sweater Austin. Magna tattooed irure, DIY do placeat helvetica sapiente laboris. Put a bird on it jean shorts wolf enim, viral authentic hoodie bespoke master cleanse proident. Ea pour-over swag wayfarers, Austin thundercats letterpress mollit 8-bit excepteur forage elit. Cupidatat minim dolore laborum whatever. Farm-to-table nihil tattooed, letterpress helvetica vegan semiotics pariatur pop-up. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-50 h-70 box-b-l box-b-r">
-					<div class="img-cont img-2"></div>
-					<h3>Shuttle Enterprise Flight to New York <span>Published May 3, 2012</span></h3>
-					<p>Art party cillum et cosby sweater aliquip wolf photo booth thundercats dreamcatcher pickled banksy. Sustainable ex kogi, mumblecore mlkshk occupy mcsweeney's freegan laboris nisi stumptown street art labore food truck. Stumptown pariatur 8-bit, iphone quis ethical pitchfork portland vegan. Irony esse gluten-free, id fanny pack umami commodo. Godard bushwick narwhal, quinoa biodiesel veniam jean shorts minim portland aesthetic excepteur sapiente. Fanny pack aesthetic post-ironic chambray esse. Bespoke nesciunt fugiat aute pariatur craft beer, laborum ex. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-25 h-70">
-					<div class="img-cont img-3"></div>
-					<h3>Expedition 30 Landing <span>Published May 3, 2012</span></h3>
-					<p>Single-origin coffee ex fingerstache keytar labore adipisicing, synth umami wolf jean shorts. Next level high life selvage cillum. Cupidatat before they sold out ex, shoreditch accusamus kogi consectetur delectus gluten-free. Keffiyeh seitan ex, trust fund fugiat gluten-free sunt put a bird on it pinterest. Vegan aesthetic vero, ethnic bespoke before they sold out williamsburg ennui 8-bit proident synth marfa mcsweeney's trust fund photo booth. Sed velit dolor, cardigan shoreditch typewriter ea. Dolore nihil occaecat high life post-ironic, ennui chillwave tattooed craft beer umami. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-50 h-30 box-b-r title-top">
-					<h3>NASA Begins Second Round of J-2X Testing <span>Published May 3, 2012</span></h3>
-					<p>Duis williamsburg irony proident vinyl. Irony stumptown magna nulla, nisi next level gentrify twee nostrud veniam retro tumblr forage. Gastropub wolf vegan hella, messenger bag next level keytar aliqua synth put a bird on it dolor exercitation iphone. Selvage tempor mollit kale chips carles. Ethnic irure master cleanse, carles non godard flexitarian. You probably haven't heard of them reprehenderit cillum ea post-ironic, delectus ut mlkshk chillwave sriracha single-origin coffee sunt. Dolore fixie do american apparel, kogi velit salvia VHS forage bespoke pariatur. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-50 h-30 title-top">
-					<h3>NASA's Webb Flight Backplane Completed <span>Published May 3, 2012</span></h3>
-					<p>Qui trust fund artisan, ullamco jean shorts craft beer ad forage. Kale chips scenester stumptown fugiat, magna nostrud aliqua. Chambray nihil gastropub 3 wolf moon food truck, cillum leggings. Mumblecore do iphone umami pork belly. Enim banh mi ut consequat, mixtape bushwick portland leggings sustainable officia nulla. Tattooed cillum ex, cray letterpress locavore marfa synth organic etsy minim williamsburg exercitation twee. Single-origin coffee cillum nulla polaroid ethical, fugiat incididunt. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-			</div>
-			
-			<div class="f-page">
-				<div class="f-title">
-					<a href="#">Previous Demo</a>
-					<h2>Incredible Spacenews</h2>
-					<a href="#">Back to the Codrops Article</a>
-				</div>
-				<div class="box w-70 h-50 box-b-r title-top box-img-left">
-					<div class="img-cont img-4"></div>
-					<h3>Expedition 30 Astronaut back on Earth <span>Published May 3, 2012</span></h3>
-					<p>Consectetur locavore brooklyn dreamcatcher, aesthetic anim dolor put a bird on it semiotics godard pork belly forage. VHS veniam aliqua thundercats dolore keffiyeh, direct trade authentic PBR eiusmod. Dolore veniam fanny pack, proident iphone mixtape irure sed. Lo-fi leggings stumptown cardigan etsy, pitchfork echo park terry richardson next level labore proident. Messenger bag cillum squid scenester, before they sold out dolor nostrud ad bicycle rights. Ut ex bicycle rights, wes anderson thundercats duis synth gluten-free hoodie twee. Four loko artisan viral, letterpress dreamcatcher twee yr cray vegan enim photo booth 3 wolf moon. Id veniam mustache squid, cliche terry richardson organic quis dreamcatcher skateboard. Chambray before they sold out yr, iphone street art ut locavore squid placeat you probably haven't heard of them small batch. Cred proident occaecat wolf, fixie letterpress est biodiesel kogi gentrify. Artisan +1 culpa, bicycle rights trust fund direct trade consectetur gentrify synth pariatur twee delectus consequat wayfarers deserunt. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-30 h-50">
-					<div class="img-cont img-5"></div>
-					<h3>Space Shuttle Discovery Ready For Demate <span>Published May 3, 2012</span></h3>
-					<p>Ethical 3 wolf moon sartorial nihil consequat twee, officia banh mi scenester carles vero thundercats. Keffiyeh mlkshk cliche craft beer, sartorial bespoke flexitarian helvetica consequat. Echo park organic nihil nostrud brooklyn scenester, delectus bushwick est narwhal sriracha. Chambray terry richardson direct trade, tumblr keffiyeh semiotics minim post-ironic. Sapiente nostrud banksy in nisi, lo-fi kale chips polaroid retro. 8-bit you probably haven't heard of them bespoke cred portland trust fund yr dolore sed. Art party quis street art american apparel lomo. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-30 h-50 box-b-r title-top">
-					<h3>Black Hole Caught Red-Handed in a Stellar Homicide <span>Published May 3, 2012</span></h3>
-					<p>Salvia +1 pork belly cosby sweater, lo-fi wolf tattooed VHS. Before they sold out dolore cray flexitarian et VHS +1 trust fund. Typewriter squid fap aute wolf 3 wolf moon, vice cillum street art. Austin organic gluten-free, ex cosby sweater odio squid. Iphone high life sriracha, +1 cupidatat assumenda shoreditch exercitation wayfarers. Aesthetic selvage nesciunt ennui. Nisi anim single-origin coffee, ullamco bushwick delectus fanny pack marfa tumblr cliche. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-70 h-50 title-top box-img-left">
-					<div class="img-cont img-6"></div>
-					<h3>Space Station Trio Lands Safely In Kazakhstan <span>Published May 3, 2012</span></h3>
-					<p>Consectetur locavore brooklyn dreamcatcher, aesthetic anim dolor put a bird on it semiotics godard pork belly forage. VHS veniam aliqua thundercats dolore keffiyeh, direct trade authentic PBR eiusmod. Dolore veniam fanny pack, proident iphone mixtape irure sed. Lo-fi leggings stumptown cardigan etsy, pitchfork echo park terry richardson next level labore proident. Messenger bag cillum squid scenester, before they sold out dolor nostrud ad bicycle rights. Ut ex bicycle rights, wes anderson thundercats duis synth gluten-free hoodie twee. Four loko artisan viral, letterpress dreamcatcher twee yr cray vegan enim photo booth 3 wolf moon. Semiotics mlkshk anim sustainable butcher tempor. Odio single-origin coffee raw denim consequat mcsweeney's retro bespoke. Vero voluptate minim, letterpress accusamus twee farm-to-table pariatur cray.  Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-			</div>
-			
-			<div class="f-page">
-				<div class="f-title">
-					<a href="#">Previous Demo</a>
-					<h2>Incredible Spacenews</h2>
-					<a href="#">Back to the Codrops Article</a>
-				</div>
-				<div class="box w-30 h-60 box-b-r title-top">
-					<h3>NASA Statement on John Glenn Selection for Medal of Freedom <span>Published May 3, 2012</span></h3>
-					<p>Accusamus yr gluten-free id. Ennui occupy scenester polaroid, incididunt VHS minim sustainable skateboard aute cillum retro. Odd future gluten-free excepteur retro, biodiesel jean shorts minim nisi. Mlkshk hoodie next level pop-up 8-bit. Butcher scenester aliqua, tumblr nisi mcsweeney's PBR pork belly bespoke keytar cillum laboris swag pitchfork. Fugiat et eu american apparel truffaut brooklyn minim. Incididunt quis pickled, chillwave +1 odio dolore freegan est pop-up before they sold out twee cliche echo park ut. In high life swag tofu ethnic 8-bit, seitan pinterest DIY lomo post-ironic. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-70 h-60 box-img-left title-top">
-					<div class="img-cont img-7"></div>
-					<h3>Legendary Astronaut Shannon Lucid Retires From NASA <span>Published May 3, 2012</span></h3>
-					<p>Wes anderson trust fund organic pour-over, aute authentic high life fanny pack enim. Ethnic mumblecore salvia, letterpress minim velit fugiat sartorial beard mixtape vice ad. Farm-to-table aute cred cosby sweater sed, dolore pork belly pinterest keytar 3 wolf moon mustache. Vice thundercats pour-over, lo-fi echo park accusamus ullamco adipisicing selvage street art you probably haven't heard of them etsy. Readymade bushwick mumblecore whatever aesthetic, do nesciunt direct trade proident culpa. Vegan you probably haven't heard of them hoodie adipisicing qui, voluptate Austin stumptown photo booth sed. Mixtape excepteur locavore eu, labore sustainable nisi tofu narwhal fanny pack VHS nulla aliqua. Beard velit street art aute sartorial. Sapiente pitchfork polaroid, fugiat ea DIY williamsburg forage officia sint occaecat. Gentrify exercitation cray marfa, blog biodiesel readymade aliquip beard placeat raw denim stumptown. Austin photo booth accusamus et semiotics. Messenger bag ethical direct trade ullamco jean shorts. Selvage authentic seitan direct trade delectus butcher, mollit occupy cillum photo booth banksy proident gentrify commodo vice. Retro qui cray whatever. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-40 h-40 box-img-left box-b-r title-top">
-					<div class="img-cont img-8"></div>
-					<h3>Coverage Set For Next Soyuz Space Station Crew Rotation <span>Published May 3, 2012</span></h3>
-					<p>Mcsweeney's pitchfork chambray tattooed four loko, commodo nesciunt lo-fi dreamcatcher mixtape eu occaecat vinyl cupidatat. Delectus selvage gentrify, commodo fingerstache jean shorts sriracha you probably haven't heard of them aesthetic. Bespoke nulla eiusmod deserunt, qui 8-bit +1 high life proident dolor small batch accusamus laborum ethical. In high life swag tofu ethnic 8-bit, seitan pinterest DIY lomo post-ironic. American apparel fingerstache portland, lomo thundercats small batch velit quis letterpress. Dolore iphone accusamus pitchfork authentic. Qui narwhal voluptate, street art keffiyeh non laborum. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-30 h-40 box-b-r title-top">
-					<h3>Shuttle Enterprise to Fly Over New York City Metro Area April 23 <span>Published May 3, 2012</span></h3>
-					<p>Authentic put a bird on it mustache magna. Terry richardson dolor vero, magna odio synth letterpress umami brunch vice craft beer Austin. Velit mcsweeney's consequat wes anderson. Yr eu minim id. Pinterest odio keytar, irony bushwick pickled delectus placeat 3 wolf moon trust fund. Small batch mixtape carles chambray aute pop-up reprehenderit, portland magna skateboard vero dreamcatcher. Id artisan twee tempor excepteur pitchfork. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-				<div class="box w-30 h-40 title-top">
-					<h3>Top Scientist and Technologist Discuss What's Next for NASA <span>Published May 3, 2012</span></h3>
-					<p>Nisi anim raw denim, occupy seitan magna selvage pork belly leggings gluten-free. Street art consequat aliquip, echo park helvetica enim pariatur fanny pack aesthetic et laboris pickled jean shorts ethical. Austin pop-up next level esse, retro quinoa locavore mollit etsy elit nesciunt quis salvia beard. Quis magna consequat selvage, ullamco commodo exercitation. VHS polaroid fugiat quis gastropub, cosby sweater aliquip aesthetic velit jean shorts swag. Put a bird on it etsy pork belly synth nisi, pitchfork wes anderson semiotics cliche ea. Cliche officia cosby sweater ullamco, quis stumptown est blog vinyl pork belly. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.</p>
-				</div>
-			</div>
-			
-			<div class="f-page f-cover-back">
-				<div id="codrops-ad-wrapper">
-					
-				</div>
-			</div>
-		</div>
-	
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript">
-				
-			var $container 	= $( '#flip' ),
-				$pages		= $container.children().hide();
-			
-			Modernizr.load({
-				test: Modernizr.csstransforms3d && Modernizr.csstransitions,
-				yep : ['js/jquery.tmpl.min.js','js/jquery.history.js','js/core.string.js','js/jquery.touchSwipe-1.2.5.js','js/jquery.flips.js'],
-				nope: 'css/fallback.css',
-				callback : function( url, result, key ) {
-					
-					if( url === 'css/fallback.css' ) {
-						$pages.show();
-					}
-					else if( url === 'js/jquery.flips.js' ) {
-						$container.flips();
-					}
-			
-				}
-			});
-				
-		</script>
-    </body>
+
+<!doctype html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta charset="utf-8">
+    <style>
+        .js #features {
+            margin-left: -12000px; width: 100%;
+        }
+    </style>
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title></title>
+    <meta name="description" content="">
+
+    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS : implied media="all" -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wow_book.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/preview.css"><!-- Uncomment if you are specifically targeting less enabled mobile browsers
+	<link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+
+    <!--<link href='//fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>   -->
+    <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+    <script src="js/modernizr-1.6.min.js"></script>
+
+</head>
+<body>
+<div id="container">
+<nav>
+    <ul>
+        <li><a id='first'     href="#" title='goto first page'   >First page</a></li>
+        <li><a id='back'      href="#" title='go back one page'  >Back</a></li>
+        <li><a id='next'      href="#" title='go foward one page'>Next</a></li>
+        <li><a id='last'      href="#" title='goto last page'    >last page</a></li>
+        <li><a id='zoomin'    href="#" title='zoom in'           >Zoom In</a></li>
+        <li><a id='zoomout'   href="#" title='zoom out'          >Zoom Out</a></li>
+        <li><a id='slideshow' href="#" title='start slideshow'   >Slide Show</a></li>
+        <li><a id='flipsound' href="#" title='flip sound on/off' >Flip sound</a></li>
+        <li><a id='fullscreen' href="#" title='fullscreen on/off' >Fullscreen</a></li>
+        <li><a id='thumbs'    href="#" title='thumbnails on/off' >Thumbs</a></li>
+    </ul>
+</nav>
+<div id="main">
+    <img id='click_to_open' src="images/click_to_open.png" alt='click to open' />
+    <div id='features'>
+        <div id='cover'>
+        </div>
+
+        <div class='feature pagefx hardpage'>
+            <p class='subtitle'>page flipping effect</p>
+            <h1>Hardpage</h1>
+            <p>This effect turns the page like a hardcover.</p>
+            <p> Nice for a book cover, but you can make any page in the book like that.
+            </p>
+            <br/><br/>
+            <h1>Basic</h1>
+            <p>Like the softpage effect, but without the 'diagonal twist'.</p>
+            <p>Since it doesn't use css transformations, it's used in page with flash or as fallback on old browsers.</p>
+        </div>
+        <div class='feature pagefx softpage'>
+            <p class='subtitle'>page flipping effect</p>
+            <h1>Softpage</h1>
+            <p>
+                This effect Softpages folds like a regular sheet of paper.
+            </p>
+            <p>
+                Drag this edge of the page and see how it folds nicely.
+            </p>
+        </div>
+
+        <div data-double='true' >
+            <img src='./images/easy.png' />
+        </div>
+
+        <div class='responsive feature'>
+            <h1>Responsive</h1>
+            <div class='subtitle'></div>
+            <p>
+                Wowbook make it easy to resize and adapt to various screen sizes.
+            </p>
+            <p>
+                You can bind the book dimensions to a DOM element of your choice. Use CSS media queries to set the size of the element.
+            </p>
+            <p style='color: red'>
+                ATTENTION: this feature does not work on Internet Explorer 7 and 8.
+            </p>
+        </div>
+        <div class='responsive feature'>
+            <p>If you need more control on how to resize the book, you can use the javascript API to change the book's size.
+            </p>
+        </div>
+        <div class='responsive feature'>
+            <h1>Right-to-left support</h1>
+            <p>
+                Wowbook can order the book pages from right to left if you need to use right-to-left script.
+            </p>
+        </div>
+        <div class='responsive feature'>
+            <h1>Lazy loading</h1>
+            <p>
+                Wowbook can defer the loading of a page contents until the page is shown. This is especially useful in books that contains a lot of images.
+            </p>
+        </div>
+
+        <div class='feature design'>
+            <h1>DESIGN</h1>
+            <div class='subtitle'>the way you're used to</div>
+        </div>
+        <div class='feature design'>
+            <p>
+                Let the book fits into your site's design, and not the other way around.
+            </p>
+        </div>
+
+        <div class='thumbnails feature'>
+            <h1>Thumbnails</h1>
+            <p>Basic support for displaying thumbnails.</p>
+            <h2>CSS Sprite thumbnails:</h2>
+            <p>You need to create a CSS Sprite and define a thumbnail size.</p>
+            <p>They are lighter and faster, but need to rebuild the image whenever you change the page contents and/or the thumbnails size.</p>
+            <h2>Automatic thumbnails:</h2>
+            <p>
+                Automatically created, each thumbnail is a clone of the page that is scaled down to the thumbnail size. They are more resource intensive than sprites thumbnails, but easier to update. Some browsers don't do the "scale down" part very well, leading to less than optimal (i.e., ugly) results.
+            </p>
+        </div>
+        <div class='thumbnails feature' >
+            <div style='padding-left: 1em'>
+                <h2>Change Type:</h2>
+                <div id='thumbs_type'>
+                    <button id='thumb_automatic'>Automatic</button>
+                    <button id='thumb_sprite'>CSS Sprites</button>
+                </div>
+                <h2>Change Size:</h2>
+                <p>Only valid with automatic thumbnails.</p>
+                <div id='thumbs_size'>
+                    <button>Bigger</button>
+                    <button>Smaller</button>
+                </div>
+                <h2>Change position:</h2>
+                <div id='thumbs_position'>
+                    <button>Top</button><br/>
+                    <button>Left</button>
+                    <button>Right</button>
+                    <button>Bottom</button><br/><br/>
+                    <button data-customized='true' style='width: auto'>Customized with CSS</button>
+                </div>
+            </div>
+        </div>
+
+        <div id='zoom-feature'  class='feature'>
+            <h1>Zoom</h1>
+        </div>
+        <div id='zoom-feature2' class='feature'>
+            <p>The zoom feature lets your users magnify your content to admire all the minimum details.</p>
+            <p>Configurable, multiple levels of zoom.</p>
+            <p>Design friendly : control the size and the position of the book when zoomed.</p>
+        </div>
+
+        <div class='deeplinking feature'>
+            <h1>Deep linking</h1>
+            <p>
+                Create a link to any page and they will work as expected, like <a href='#features/2' target="_blank" >this one</a> (opens a new window).
+            </p>
+            <p>
+                wowBook updates the browser's address bar to point to the current page, allowing your user bookmark what he is seeing and get back later.
+            </p>
+        </div>
+        <div class='deeplinking feature'>
+            <h1>Back button support</h1>
+            <p>
+                wowBook doesn't breaks your browser's back button.
+            </p>
+            <p style="text-align: center">
+                <img src="images/back.png" />
+            </p>
+        </div>
+
+        <div class='feature numbering'>
+            <h1>Automatic page numbering</h1>
+            <p>
+                Numbering the pages of your book is boring
+                , specially during development. Let wowBook do it for you.
+            </p>
+            <p>
+                Choose where the numbers start and where they ends.
+            </p>
+            <p>
+                Customize the appearance and position using CSS.
+            </p>
+        </div>
+        <div class='feature slideshow'>
+            <h1>Slide Show</h1>
+            <p>Turn your book into a slide show.</p>
+            <p>You can choose if you wanna pause on hover too.</p>
+            <a href='http://mediadesign.deviantart.com'><img src='images/projector.png' alt='projector' /></a>
+        </div>
+
+        <div class='feature flash'>
+            <h1>FLASH</h1>
+            <p>It's possible to use flash (like youtube videos) in your books, but the page that contains the flash object will be limited to the "basic flipping effect" (and ONLY that page).</p>
+            <p>Currently, most browsers do not handle well the css transformations used by wowbook when applied to a flash object.</p>
+        </div>
+        <div class='feature  wowbook-basic-page flash-demo'>
+            <object width="350" height="263">
+                <param name="wmode" value="transparent">
+                <param name="movie" value="//www.youtube.com/v/mfg7QJoa3o4?hl=en_US&amp;version=3"></param>
+                <param name="allowFullScreen" value="true"></param>
+                <param name="allowscriptaccess" value="always"></param>
+                <embed src="//www.youtube.com/v/mfg7QJoa3o4?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="350" height="263" wmode="transparent" allowscriptaccess="always" allowfullscreen="true"></embed>
+            </object>
+        </div>
+
+
+        <div class='feature more'>
+            <h1>and MORE</h1>
+        </div>
+        <div class='feature more'>
+            <ul>
+                <li>Browser support : <img src='./images/browser_logos-32.png' alt='browser logos'/></li>
+                <li>Keyboard navigation</li>
+                <li>Mouse wheel navigation / zoom</li>
+                <li>Play flipping sound</li>
+                <li>Documentation</li>
+                <li>Source code</li>
+                <li>Examples</li>
+                <li>Rich API</li>
+            </ul>
+        </div>
+        <div class='last_cover'>
+            <!--<img src="images/cover_last.png" width="100%" height="100%" />-->
+            <img src="images/cover_menu_back_min.jpg" width="100%" height="100%" />
+        </div>
+
+    </div> <!-- features -->
+
+</div>
+<div id='thumbs_holder'>
+</div>
+<footer>
+
+</footer>
+</div> <!--! end of #container -->
+</div>
+
+<!-- Javascript at the bottom for fast page loading -->
+
+<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="./js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+
+<script type="text/javascript" src="wow_book.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#features').wowBook({
+            height : 500
+            ,width  : 800
+            ,centeredWhenClosed : true
+            ,hardcovers : true
+            ,turnPageDuration : 1000
+            ,numberedPages : [1,-2]
+            ,controls : {
+                zoomIn    : '#zoomin',
+                zoomOut   : '#zoomout',
+                next      : '#next',
+                back      : '#back',
+                first     : '#first',
+                last      : '#last',
+                slideShow : '#slideshow',
+                flipSound : '#flipsound',
+                thumbnails : '#thumbs',
+                fullscreen : '#fullscreen'
+            }
+            ,scaleToFit: "#container"
+            ,thumbnailsPosition : 'bottom'
+            ,onFullscreenError : function(){
+                var msg="Fullscreen failed.";
+                if (self!=top) msg="The frame is blocking full screen mode. Click on 'remove frame' button above and try to go full screen again."
+                alert(msg);
+            }
+        }).css({'display':'none', 'margin':'auto'}).fadeIn(1000);
+
+        $("#cover").click(function(){
+            $.wowBook("#features").advance();
+        });
+
+        var book = $.wowBook("#features");
+
+        function rebuildThumbnails(){
+            book.destroyThumbnails()
+            book.showThumbnails()
+            $("#thumbs_holder").css("marginTop", -$("#thumbs_holder").height()/2)
+        }
+        $("#thumbs_position button").on("click", function(){
+            var position = $(this).text().toLowerCase()
+            if ($(this).data("customized")) {
+                position = "top"
+                book.opts.thumbnailsParent = "#thumbs_holder";
+            } else {
+                book.opts.thumbnailsParent = "body";
+            }
+            book.opts.thumbnailsPosition = position
+            rebuildThumbnails();
+        })
+        $("#thumb_automatic").click(function(){
+            book.opts.thumbnailsSprite = null
+            book.opts.thumbnailWidth = null
+            rebuildThumbnails();
+        })
+        $("#thumb_sprite").click(function(){
+            book.opts.thumbnailsSprite = "images/thumbs.jpg"
+            book.opts.thumbnailWidth = 136
+            rebuildThumbnails();
+        })
+        $("#thumbs_size button").click(function(){
+            var factor = 0.02*( $(this).index() ? -1 : 1 );
+            book.opts.thumbnailScale = book.opts.thumbnailScale + factor;
+            rebuildThumbnails();
+        })
+
+    });
+</script>
+
+<!-- scripts concatenated and minified via ant build script-->
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+<!-- end concatenated and minified scripts-->
+
+<!--[if lt IE 7 ]>
+<script src="js/dd_belatedpng.js"></script>
+<script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+<![endif]-->
+
+</body>
 </html>
